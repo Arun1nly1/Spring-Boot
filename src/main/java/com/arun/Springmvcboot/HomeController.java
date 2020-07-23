@@ -1,0 +1,104 @@
+package com.arun.Springmvcboot;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.arun.Springmvcboot.model.Alien;
+
+@Controller
+public class HomeController {
+	
+	@RequestMapping ("/")
+	public String home() {
+		return "index";
+	}
+	
+	
+//	 Model Attribute will be called and object is created which is available for all the jsp files
+	@ModelAttribute
+	public void modelData(Model m) {
+		m.addAttribute("name","Aliens");
+		}
+
+	
+	
+	//Same as JSP and Servlets
+//	@RequestMapping("add")
+//	public String add(HttpServletRequest req) {
+//		int i = Integer.parseInt(req.getParameter("num1"));
+//		int j = Integer.parseInt(req.getParameter("num2"));
+//
+//		int num3 = i + j;
+//		
+//		HttpSession session = req.getSession();
+//		session.setAttribute("num3", num3);
+//		return "result.jsp";
+//	}
+//	
+	
+	
+//	 But in spring, same thing is done using ModelAndView
+//	@RequestMapping("add")
+//	public ModelAndView add(@RequestParam("num1")int i,@RequestParam("num2") int j) {
+//		
+//		ModelAndView mv = new ModelAndView();
+//		mv.setViewName("result");
+//		int num3 = i+j;
+//		mv.addObject("num3", num3);
+//		return mv;
+//	}
+	
+	
+//	 But in spring, same thing is done using Model or ModelMap
+//	@RequestMapping("add")
+//	public String add(@RequestParam("num1")int i,@RequestParam("num2") int j,Model m) {
+//		
+//		int num3 = i+j;
+//		m.addAttribute("num3", num3);
+//		return "result";
+//	}
+//	
+
+	
+//	Controller for addAlien as above
+//	@RequestMapping("addAlien")
+//	public String addAlien(@RequestParam("aid")int aid,@RequestParam("aname") String aname, Model m) {
+//		Alien a = new Alien();
+//		a.setAid(aid);
+//		a.setAname(aname);
+//		m.addAttribute("alien", a);
+//		
+//	
+//		return "result";
+//	}
+	
+//	Controller for addAlien automatic
+	@PostMapping("addAlien")
+	public String addAlien(@ModelAttribute("a1")Alien a, Model m) {
+		return "result";
+	}
+	
+	
+	@GetMapping("getAliens")
+	public String getAliens(Model m) {
+		List<Alien> aliens = Arrays.asList(new Alien(101,"navin"), new Alien(102,"Krishna"));
+		m.addAttribute("result", aliens);
+		return "showAliens";
+	}
+	
+	
+
+}
