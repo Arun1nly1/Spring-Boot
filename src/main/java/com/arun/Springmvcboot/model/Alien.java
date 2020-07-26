@@ -1,10 +1,20 @@
 package com.arun.Springmvcboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+
+@Entity
 public class Alien {
+	
+	@Id
 	private int aid;
 	private String aname;
 	
-	
+	public Alien() {}
 	
 	public Alien(int aid, String aname) {
 		super();

@@ -1,0 +1,64 @@
+2020-07-26 13:40:16.553  INFO 20119 --- [main] c.a.S.SpringmvcbootApplication           : Starting SpringmvcbootApplication on arun with PID 20119 (/home/arun/Documents/Projects/springmvcboot/target/classes started by arun in /home/arun/Documents/Projects/springmvcboot)
+2020-07-26 13:40:16.554  INFO 20119 --- [main] c.a.S.SpringmvcbootApplication           : No active profile set, falling back to default profiles: default
+2020-07-26 13:40:16.891  INFO 20119 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-26 13:40:16.920  INFO 20119 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 1 JPA repository interfaces.
+2020-07-26 13:40:17.181  INFO 20119 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-26 13:40:17.185  INFO 20119 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-26 13:40:17.185  INFO 20119 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-26 13:40:17.288  INFO 20119 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-26 13:40:17.290  INFO 20119 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-26 13:40:17.290  INFO 20119 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2020-07-26 13:40:17.387  INFO 20119 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-26 13:40:17.391  INFO 20119 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-26 13:40:17.615  INFO 20119 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-26 13:40:17.640  INFO 20119 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-26 13:40:17.663  INFO 20119 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-26 13:40:17.672  WARN 20119 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-26 13:40:17.736  INFO 20119 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-26 13:40:17.793  INFO 20119 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-26 13:40:17.797  INFO 20119 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-07-26 13:40:17.885  INFO 20119 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-26 13:40:17.886  INFO 20119 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-26 13:40:18.072  INFO 20119 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-26 13:40:18.077  INFO 20119 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-26 13:40:18.229  INFO 20119 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-26 13:40:18.234  INFO 20119 --- [main] c.a.S.SpringmvcbootApplication           : Started SpringmvcbootApplication in 1.854 seconds (JVM running for 2.137)
+2020-07-26 13:40:21.162  INFO 20119 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-26 13:40:21.162  INFO 20119 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-26 13:40:21.167  INFO 20119 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-07-26 13:40:21.181  INFO 20119 --- [http-nio-8080-exec-2] com.arun.Springmvcboot.LoggingAspect     : get aliens method from aspect
+2020-07-26 13:42:26.776  INFO 20119 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-26 13:42:26.788  INFO 20119 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-26 13:42:26.789  INFO 20119 --- [RMI TCP Connection(11)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-26 13:42:26.789  INFO 20119 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-26 13:42:26.793  INFO 20119 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-26 13:42:28.690  INFO 20564 --- [main] c.a.S.SpringmvcbootApplication           : Starting SpringmvcbootApplication on arun with PID 20564 (/home/arun/Documents/Projects/springmvcboot/target/classes started by arun in /home/arun/Documents/Projects/springmvcboot)
+2020-07-26 13:42:28.692  INFO 20564 --- [main] c.a.S.SpringmvcbootApplication           : No active profile set, falling back to default profiles: default
+2020-07-26 13:42:29.039  INFO 20564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-26 13:42:29.073  INFO 20564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 1 JPA repository interfaces.
+2020-07-26 13:42:29.344  INFO 20564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-26 13:42:29.349  INFO 20564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-26 13:42:29.349  INFO 20564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-26 13:42:29.456  INFO 20564 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-26 13:42:29.458  INFO 20564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-26 13:42:29.458  INFO 20564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 741 ms
+2020-07-26 13:42:29.556  INFO 20564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-26 13:42:29.562  INFO 20564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-26 13:42:29.783  INFO 20564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-26 13:42:29.807  INFO 20564 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-26 13:42:29.830  INFO 20564 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-26 13:42:29.839  WARN 20564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-26 13:42:29.902  INFO 20564 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-26 13:42:29.967  INFO 20564 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-07-26 13:42:29.977  INFO 20564 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-26 13:42:30.070  INFO 20564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-26 13:42:30.071  INFO 20564 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-26 13:42:30.257  INFO 20564 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-26 13:42:30.262  INFO 20564 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-26 13:42:30.406  INFO 20564 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-26 13:42:30.411  INFO 20564 --- [main] c.a.S.SpringmvcbootApplication           : Started SpringmvcbootApplication in 1.888 seconds (JVM running for 2.165)
+2020-07-26 13:42:34.508  INFO 20564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-26 13:42:34.508  INFO 20564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-26 13:42:34.513  INFO 20564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-07-26 13:42:34.525  INFO 20564 --- [http-nio-8080-exec-1] com.arun.Springmvcboot.LoggingAspect     : get aliens method from aspect BEFORE
+2020-07-26 13:42:34.563  INFO 20564 --- [http-nio-8080-exec-1] com.arun.Springmvcboot.LoggingAspect     : get aliens method from aspect AFTER

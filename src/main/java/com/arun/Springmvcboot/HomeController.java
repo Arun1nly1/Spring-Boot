@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,9 @@ import com.arun.Springmvcboot.model.Alien;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	AlienRepo repo;
 	
 	@RequestMapping ("/")
 	public String home() {
@@ -87,17 +91,49 @@ public class HomeController {
 	
 //	Controller for addAlien automatic
 	@PostMapping("addAlien")
-	public String addAlien(@ModelAttribute("a1")Alien a, Model m) {
+	public String addAlien(@ModelAttribute("a1")Alien a) {
+		repo.save(a);
 		return "result";
 	}
 	
 	
-	@GetMapping("getAliens")
-	public String getAliens(Model m) {
-		List<Alien> aliens = Arrays.asList(new Alien(101,"navin"), new Alien(102,"Krishna"));
-		m.addAttribute("result", aliens);
+	@GetMapping("getAlien")
+	public String getAlien(@RequestParam("aid") int aid,Model m) {
+		System.out.println("Aid is:"+aid);
+		m.addAttribute("result", repo.getOne(aid));
 		return "showAliens";
 	}
+	
+//	@GetMapping("getAliens")
+//	public String getAlien(Model m) {
+//		m.addAttribute("result", repo.findAll());
+//		return "showAliens";
+//	}
+//	
+	
+	//Using DSL
+//	@GetMapping("getAlienByName")
+//	public String getAlien(@RequestParam String aname,Model m) {
+//		System.out.println("Aid is:"+aname);
+//		m.addAttribute("result", repo.findByAnameOrderByAidDesc(aname));
+//		return "showAliens";
+//	}
+	
+	
+	//Using annotations
+	@GetMapping("getAlienByName")
+	public String getAlien(@RequestParam String aname,Model m) {
+		System.out.println("Aname is:"+aname);
+		m.addAttribute("result", repo.find(aname));
+		return "showAliens";
+	}
+	
+//	@GetMapping("getallAliens")
+//	public String getAliens(Model m) {
+//		m.addAttribute("result", repo.findAll());
+//		return "showAliens";
+//	}
+//	
 	
 	
 
